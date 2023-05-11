@@ -1,0 +1,342 @@
+//@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900&display=swap");//
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"), url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"), url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.woff2") format("woff2"), url("../fonts/Poppins-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "CalSans";
+  src: url("../fonts/CalSans-SemiBold.woff2") format("woff2"), url("../fonts/CalSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+// основной шрифт и размер //
+
+$fontFamily: "Poppins", sans-serif;
+$fontWeight: 400;
+$fontSize: 16px;
+$mainColor: #666666;
+
+@import "_null";
+
+//============= Общие стили ===============//
+
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  // Прижимаем footer
+  > main {
+    flex: 1 1 auto;
+  }
+  // Фикс для слайдеров
+  > * {
+    min-width: 0;
+  }
+}
+
+[class*="__container"] {
+  max-width: 1230px; // сначала контейнер был 1200 как на макете, стал 1230 изза padding 30px
+  margin: 0px auto;
+  padding: 0px 15px;
+  @media (max-width: 1200px) {
+    // max-width: 970px;
+  }
+  @media (max-width: 1087px) {
+    // max-width: 970px;
+  }
+  @media (max-width: 991.98px) {
+    // max-width: 750px;
+  }
+  @media (max-width: 767.98px) {
+    // max-width: none;
+  }
+}
+
+[class*="-ibg"] {
+  position: relative;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+//================ Общие стили ===========//
+
+//================ header ===============//
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  // .header__container
+
+  &__container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    gap: 131px;
+    align-items: center;
+    min-height: 158px;
+    @media (max-width: 1092px) {
+      gap: 50px;
+      min-height: 100px;
+    }
+    @media (max-width: 767.98px) {
+      gap: 50px;
+      min-height: 65px;
+    }
+    @media (max-width: 479.98px) {
+      gap: 15px;
+    }
+  }
+
+  // .header__logo
+
+  &__logo {
+    @media (max-width: 479.98px) {
+      width: 40px;
+      flex: 0 0 28px;
+      overflow: hidden;
+    }
+  }
+
+  // .header__menu
+
+  &__menu {
+    @media (max-width: 479.98px) {
+      padding: 0;
+    }
+  }
+}
+.menu {
+  padding: 10px 15px 10px 0px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+  @media (max-width: 479.98px) {
+    padding-right: 0;
+  }
+  // .menu__list
+
+  &__list {
+    display: flex;
+    column-gap: 56px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    @media (max-width: 1092px) {
+      column-gap: 40px;
+    }
+    @media (max-width: 479.98px) {
+      column-gap: 20px;
+    }
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(18, 18, 18, 0.4);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//================ header ===============//
+
+//================ main ===============//
+.page {
+  // .page__main
+
+  &__main {
+  }
+}
+
+.main {
+  padding: 0px 0px 80px 0px;
+  // .main__container
+
+  &__container {
+    display: flex;
+  }
+
+  // .main__content
+
+  &__content {
+    flex: 0 1 50%;
+    align-self: flex-end;
+    padding: 120px 20px 60px 0px;
+    @media (max-width: 1092px) {
+      flex: 0 0 60%;
+      padding-bottom: 0;
+    }
+    @media (max-width: 767.98px) {
+      flex: 1 1 100%;
+      padding-right: 0;
+      padding-top: 80px;
+    }
+  }
+
+  // .main__title
+
+  &__title {
+    font-family: "CalSans";
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 1.2;
+    color: #121212;
+    span {
+      color: #ff6428;
+    }
+    &:not(:last-child) {
+      margin: 0px 0px 16px 0px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 44px;
+    }
+  }
+
+  // .main__text
+
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 420px;
+    &:not(:last-child) {
+      margin: 0px 0px 33px 0px;
+    }
+  }
+
+  // .main__actions
+
+  &__actions {
+  }
+
+  // .main__decor
+
+  &__decor {
+    flex: 0 1 50%;
+    @media (max-width: 1092px) {
+      flex: 0 0 40%;
+    }
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
+}
+
+.actions-main {
+  display: flex;
+  align-items: center;
+  @media (max-width: 479.98px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  // .actions-main__button
+
+  &__button {
+    padding: 18.5px 48px;
+    background-color: #ff6428;
+    border-radius: 40px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #ffffff;
+    text-align: center;
+    &:not(:last-child) {
+      margin: 0px 40px 0px 0px;
+    }
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: #ba4619;
+    }
+    @media (max-width: 479.98px) {
+      flex: 1 1 100%;
+      &:not(:last-child) {
+        margin: 0px 0px 15px 0px;
+      }
+    }
+  }
+
+  // .actions-main__icon
+
+  &__icon {
+    &:not(:last-child) {
+      margin: 0px 27px 0px 0px;
+    }
+  }
+}
+
+.main {
+  // .main__image
+
+  &__image {
+    //display: inline-block;
+    position: relative;
+    margin-right: -135px;
+    padding-bottom: 97.6%;
+    max-width: 672px;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      border-radius: 0 0 160px 375px;
+    }
+    &::after {
+      content: "";
+      background: url("../img/main/decor.svg") 0 0 no-repeat;
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      right: 36.3%;
+      bottom: 0;
+      transform: translate(0, 50%);
+    }
+    @media (max-width: 1092px) {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+//================ main ===============//
