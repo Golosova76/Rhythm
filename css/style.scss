@@ -89,6 +89,20 @@ html {
   }
 }
 
+.title {
+  font-family: "CalSans";
+  font-size: 44px;
+  text-align: center;
+  line-height: 120%;
+  color: #121212;
+  span {
+    color: #ff6428;
+  }
+  @media (max-width: 767.98px) {
+    font-size: 38px;
+  }
+}
+
 //================ Общие стили ===========//
 
 //================ header ===============//
@@ -190,6 +204,12 @@ html {
 
 .main {
   padding: 0px 0px 80px 0px;
+  @media (max-width: 991.98px) {
+    padding: 0px 0px 50px 0px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 0px 0px 30px 0px;
+  }
   // .main__container
 
   &__container {
@@ -340,3 +360,161 @@ html {
 }
 
 //================ main ===============//
+
+//============== store ===============//
+.page {
+  // .page__store
+
+  &__store {
+  }
+}
+
+.store {
+  padding: 80px 0px 90px 0px;
+  @media (max-width: 991.98px) {
+    padding: 50px 0px 50px 0px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 30px 0px 30px 0px;
+  }
+  // .store__container
+
+  &__container {
+  }
+
+  // .store__title
+
+  &__title {
+    &:not(:last-child) {
+      margin: 0px 0px 86px 0px;
+    }
+    @media (max-width: 991.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 50px 0px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 30px 0px;
+      }
+    }
+  }
+
+  // .store__body
+
+  &__body {
+  }
+}
+
+.body-store {
+  // .body-store_top
+
+  &_top {
+    &:not(:last-child) {
+      margin: 0px 0px 96px 0px;
+    }
+    @media (max-width: 767.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 56px 0px;
+      }
+    }
+  }
+
+  // .body-store__header
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    &:not(:last-child) {
+      margin: 0px 0px 32px 0px;
+    }
+  }
+
+  // .body-store__title
+
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.08em;
+    color: #121212;
+    text-transform: uppercase;
+  }
+
+  // .body-store__all
+
+  &__all {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: #868686;
+  }
+
+  // .body-store__items
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 54px;
+    @media (max-width: 991.98px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 560.98px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .body-store__item
+
+  &__item {
+  }
+}
+
+.item {
+  display: grid;
+  // .item__image
+
+  &__image {
+    text-align: center;
+    &:not(:last-child) {
+      margin: 0px 0px 40px 0px;
+    }
+    img {
+      max-width: 100%;
+    }
+    @media (max-width: 767.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+      }
+    }
+  }
+
+  // .item__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+    justify-self: start;
+    &:not(:last-child) {
+      margin: 0px 0px 7px 0px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // .item__price
+
+  &__price {
+    font-size: 14px;
+    line-height: 150%;
+    color: #666666;
+  }
+}
+
+//============== store ===============//
