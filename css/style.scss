@@ -518,3 +518,124 @@ html {
 }
 
 //============== store ===============//
+
+//=========== categories ============//
+.page {
+  // .page__categories
+
+  &__categories {
+  }
+}
+
+.categories {
+  padding: 90px 0px 110px 0px;
+  @media (max-width: 991.98px) {
+    padding: 50px 0px 50px 0px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 30px 0px 30px 0px;
+  }
+  // .categories__container
+
+  &__container {
+  }
+
+  // .categories__title
+
+  &__title {
+    &:not(:last-child) {
+      margin: 0px 0px 80px 0px;
+    }
+    @media (max-width: 991.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 50px 0px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      &:not(:last-child) {
+        margin: 0px 0px 30px 0px;
+      }
+    }
+  }
+
+  // .categories__items
+
+  &__items {
+    max-width: 1088px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 70px;
+    row-gap: 30px;
+    @media (max-width: 1230px) {
+      column-gap: 40px;
+    }
+    @media (max-width: 991.98px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+    }
+    @media (max-width: 479.98px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 20px;
+    }
+  }
+
+  // .categories__item
+
+  &__item {
+  }
+}
+
+.item-category {
+  position: relative;
+  &:hover .item-category__image {
+    img {
+      transform: scale(1.1);
+    }
+  }
+  // .item-category__title
+
+  &__title {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 30px 20px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffffff;
+    z-index: 3;
+  }
+
+  // .item-category__image
+
+  &__image {
+    position: relative;
+    padding: 0px 0px 127.5% 0px;
+    border-radius: 20px;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.16) 50%, rgba(0, 0, 0, 0.8) 100%);
+      z-index: 2;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      transition: all 0.3s ease 0s;
+    }
+  }
+}
+
+//=========== categories ============//
