@@ -713,3 +713,107 @@ html {
 .brands__item img {
   max-width: 100%;
 }
+
+.why {
+  background-color: #121212;
+  padding: 94px 0px;
+}
+@media (max-width: 991.98px) {
+  .why {
+    padding: 50px 0px 50px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .why {
+    padding: 30px 0px 30px 0px;
+  }
+}
+.why__title {
+  color: #ffffff;
+}
+.why__title:not(:last-child) {
+  margin: 0px 0px 75px 0px;
+}
+@media (max-width: 991.98px) {
+  .why__title:not(:last-child) {
+    margin: 0px 0px 50px 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  .why__title:not(:last-child) {
+    margin: 0px 0px 40px 0px;
+  }
+}
+.why__items {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 991.98px) {
+  .why__items {
+    gap: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .why__items {
+    grid-template-columns: repeat(2, auto);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .why__items {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+.item-why {
+  display: grid;
+  justify-items: center;
+  padding: 0px 35px;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .item-why {
+    padding: 0px 20px;
+  }
+}
+.item-why__icon {
+  background-color: #262626;
+  border-radius: 20px;
+  width: 72px;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.item-why__icon:not(:last-child) {
+  margin: 0px 0px 40px 0px;
+}
+.item-why__title {
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.item-why__title:not(:last-child) {
+  margin: 0px 0px 12px 0px;
+}
+.item-why__text {
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #666666;
+  max-width: 230px;
+}
